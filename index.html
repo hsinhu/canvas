@@ -57,7 +57,11 @@
 	}
 
 	function draw(e){
-
+		if (!Drawornot) return 
+		cxt.beginPath()
+		cxt.arc(position.x, position.y, 10, 0, 2 * Math.PI)
+		cxt.fill()
+		reset(e)
 	}
 	var colorPicker = document.getElementById("picker")
 	colorPicker.addEventListener("change",function(){
